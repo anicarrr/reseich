@@ -1,0 +1,22 @@
+# Validate commit message format
+# Expected format: type(scope): description
+# Examples: feat(auth): add login functionality, fix(ui): resolve button styling issue
+
+# commit_regex='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .{1,50}'
+# 
+# if ! grep -qE "$commit_regex" "$1"; then
+#   echo "❌ Invalid commit message format!"
+#   echo ""
+#   echo "Commit message should follow the format: type(scope): description"
+#   echo ""
+#   echo "Types: feat, fix, docs, style, refactor, test, chore, perf, ci, build, revert"
+#   echo "Scope: optional, e.g., (auth), (ui), (api)"
+#   echo "Description: brief description (1-50 characters)"
+#   echo ""
+#   echo "Examples:"
+#   echo "  feat(auth): add login functionality"
+#   echo "  fix(ui): resolve button styling issue"
+#   echo "  docs: update README with setup instructions"
+#   echo ""
+#   exit 1
+# fi
