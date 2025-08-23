@@ -15,8 +15,8 @@ ReSeich is a decentralized research platform that combines advanced AI capabilit
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/reseich-team.git
-cd reseich-team/frontend
+git clone https://github.com/anicarrr/reseich.git
+cd reseich/frontend
 
 # Install dependencies
 npm install
