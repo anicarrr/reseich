@@ -1,0 +1,32 @@
+{
+  "name": "reseich-team",
+  "version": "1.0.0",
+  "description": "ReSeich Team - AI-powered research platform",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "lint": "cd frontend && npm run lint",
+    "type-check": "cd frontend && npx tsc --noEmit",
+    "format": "cd frontend && npx prettier --write .",
+    "format:check": "cd frontend && npx prettier --check .",
+    "prepare": "[ -n \"$CI\" ] || husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5"
+  },
+  "lint-staged": {
+    "frontend/**/*.{js,jsx,ts,tsx}": [
+      "cd frontend && npx eslint --fix",
+      "cd frontend && npx prettier --write"
+    ],
+    "frontend/**/*.{json,md,css}": [
+      "cd frontend && npx prettier --write"
+    ]
+  }
+}

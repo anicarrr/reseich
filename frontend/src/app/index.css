@@ -1,0 +1,315 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+    --primary: #e9407a;
+    --primary-foreground: #ffffff;
+    --secondary: #ffedd5;
+    --secondary-foreground: #c2410c;
+    --muted: #f8fafc;
+    --muted-foreground: #64748b;
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #e9407a;
+    --chart-1: #e9407a;
+    --chart-2: #ff8a00;
+    --chart-3: #2563eb;
+    --chart-4: #059669;
+    --chart-5: #ea580c;
+    --sidebar: #f8fafc;
+    --sidebar-foreground: #0f172a;
+    --sidebar-primary: #e9407a;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f1f5f9;
+    --sidebar-accent-foreground: #0f172a;
+    --sidebar-border: #e2e8f0;
+    --sidebar-ring: #e9407a;
+    --font-sans: Inter;
+    --font-serif: serif;
+    --font-mono: monospace;
+    --radius: 1.0rem;
+    --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.03);
+    --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.03);
+    --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+    --shadow: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+    --shadow-md: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05);
+    --shadow-lg: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 4px 6px -1px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 8px 10px -1px hsl(0 0% 0% / 0.05);
+    --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.13);
+    --tracking-normal: 0rem;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: #1a2035;
+    --foreground: #f5f5f5;
+    --card: #1f263e;
+    --card-foreground: #f5f5f5;
+    --popover: #1f263e;
+    --popover-foreground: #f5f5f5;
+    --primary: #e9407a;
+    --primary-foreground: #ffffff;
+    --secondary: #ff8a00;
+    --secondary-foreground: #1a2035;
+    --muted: #2a375a;
+    --muted-foreground: #a1a1aa;
+    --accent: #2a375a;
+    --accent-foreground: #f5f5f5;
+    --destructive: #ef4444;
+    --destructive-foreground: #f8fafc;
+    --border: #2a375a;
+    --input: #2a375a;
+    --ring: #e9407a;
+    --chart-1: #e9407a;
+    --chart-2: #ff8a00;
+    --chart-3: #3b82f6;
+    --chart-4: #10b981;
+    --chart-5: #f97316;
+    --sidebar: #1f263e;
+    --sidebar-foreground: #f5f5f5;
+    --sidebar-primary: #e9407a;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #2a375a;
+    --sidebar-accent-foreground: #f5f5f5;
+    --sidebar-border: #2a375a;
+    --sidebar-ring: #e9407a;
+    --font-sans: Inter;
+    --font-serif: serif;
+    --font-mono: monospace;
+    --radius: 1.0rem;
+    --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+    --shadow: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+    --shadow-md: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);
+    --shadow-lg: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
+    --shadow-xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 8px 10px -1px hsl(0 0% 0% / 0.10);
+    --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.25);
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    letter-spacing: var(--tracking-normal);
+  }
+}
+
+@layer utilities {
+  /* Futuristic design animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(233, 64, 122, 0.3);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(233, 64, 122, 0.6);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  /* Sticky header utilities */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+  }
+
+  .header-spacer {
+    padding-top: 4rem; /* 64px - matches header height */
+  }
+
+  .header-spacer-lg {
+    padding-top: 5rem; /* 80px - extra spacing for complex layouts */
+  }
+
+  /* Ensure sticky behavior works across browsers */
+  @supports (position: sticky) {
+    .sticky-header {
+      position: sticky;
+    }
+  }
+
+  /* Fallback for browsers that don't support sticky */
+  @supports not (position: sticky) {
+    .sticky-header {
+      position: fixed;
+    }
+    
+    .header-spacer,
+    .header-spacer-lg {
+      margin-top: 4rem;
+    }
+  }
+
+  /* Circuit board effect */
+  .circuit-bg {
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(233, 64, 122, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      linear-gradient(45deg, transparent 49%, rgba(233, 64, 122, 0.05) 50%, transparent 51%);
+    background-size:
+      100px 100px,
+      150px 150px,
+      20px 20px;
+  }
+
+  /* Enhanced backdrop blur */
+  .backdrop-blur-ultra {
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+
+  /* Gradient text with animation */
+  .gradient-text-animated {
+    background: linear-gradient(-45deg, #e9407a, #ff8a00, #3b82f6, #e9407a);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Floating particles effect */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(233, 64, 122, 0.6);
+    border-radius: 50%;
+    animation: particle-float 8s infinite linear;
+  }
+
+  @keyframes particle-float {
+    0% {
+      transform: translateY(100vh) translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) translateX(100px);
+      opacity: 0;
+    }
+  }
+
+  /* Custom shadows using CSS variables */
+  .shadow-custom-2xs {
+    box-shadow: var(--shadow-2xs);
+  }
+
+  .shadow-custom-xs {
+    box-shadow: var(--shadow-xs);
+  }
+
+  .shadow-custom-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-custom {
+    box-shadow: var(--shadow);
+  }
+
+  .shadow-custom-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-custom-xl {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .shadow-custom-2xl {
+    box-shadow: var(--shadow-2xl);
+  }
+
+  /* Custom tracking utilities */
+  .tracking-custom-tighter {
+    letter-spacing: var(--tracking-tighter);
+  }
+
+  .tracking-custom-tight {
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .tracking-custom-normal {
+    letter-spacing: var(--tracking-normal);
+  }
+
+  .tracking-custom-wide {
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .tracking-custom-wider {
+    letter-spacing: var(--tracking-wider);
+  }
+
+  .tracking-custom-widest {
+    letter-spacing: var(--tracking-widest);
+  }
+}
