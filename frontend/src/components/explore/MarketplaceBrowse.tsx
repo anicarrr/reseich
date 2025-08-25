@@ -382,10 +382,10 @@ export const MarketplaceBrowse: React.FC<MarketplaceBrowseProps> = ({
       ) : viewMode === 'grid' ? (
         <ResearchGrid>
           {filteredListings.map((listing) => (
-            <Card key={listing.id} className="relative group hover:shadow-lg transition-shadow">
+            <Card key={listing.id} className="relative group hover:shadow-lg transition-shadow flex flex-col justify-between">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <div className="space-y-2 flex-1">
+                  <div className="space-y-2 flex-1 lg:max-w-[50%]">
                     <CardTitle className="text-lg font-semibold line-clamp-2">{listing.research?.title}</CardTitle>
                     <CardDescription className="line-clamp-2">
                       {listing.description || listing.research?.description}

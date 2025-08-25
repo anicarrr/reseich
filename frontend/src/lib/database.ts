@@ -678,9 +678,10 @@ export const marketplaceService = {
 
       if (isDemoMode) {
         query = query.eq('demo_ip', userIdOrDemoIp).eq('is_demo', true);
-      } else {
-        query = query.eq('user_id', userIdOrDemoIp).eq('is_demo', false);
       }
+      // } else {
+      //   query = query.eq('user_id', userIdOrDemoIp).eq('is_demo', false);
+      // }
 
       const { data, error } = await query.single();
 
