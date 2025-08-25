@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://reseich.com"),
+  metadataBase: new URL("https://reseich.xyz"),
   alternates: {
     canonical: "/",
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://reseich.com",
+    url: "https://reseich.xyz",
     title: "ReSeich - Sei Research & DeSci Platform",
     description:
       "Access advanced AI research tools, monetize your work, and discover groundbreaking insights on Sei Network",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     audio: [],
     determiner: "auto",
     countryName: "Global",
-    emails: ["contact@reseich.com"],
+    emails: ["contact@reseich.xyz"],
     phoneNumbers: [],
     faxNumbers: [],
     alternateLocale: ["es_ES", "pt_BR", "fr_FR"],
@@ -181,7 +181,7 @@ export default function RootLayout({
         <meta name="apple-touch-fullscreen" content="yes" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://reseich.com" />
+        <link rel="canonical" href="https://reseich.xyz" />
         
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -190,7 +190,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link rel="dns-prefetch" href="https://reseich.com" />
+        <link rel="dns-prefetch" href="https://reseich.xyz" />
         
         {/* Additional structured data for rich snippets */}
         <script
@@ -201,7 +201,7 @@ export default function RootLayout({
               "@type": "WebApplication",
               "name": "ReSeich",
               "description": "Sei Research & DeSci Platform - Access advanced AI research tools, monetize your work, and discover groundbreaking insights on Sei Network",
-              "url": "https://reseich.com",
+              "url": "https://reseich.xyz",
               "applicationCategory": "BusinessApplication",
               "operatingSystem": "Web",
               "offers": {
@@ -218,7 +218,7 @@ export default function RootLayout({
                 "name": "ReSeich",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://reseich.com/logo-main.png"
+                  "url": "https://reseich.xyz/logo-main.png"
                 }
               }
             })
