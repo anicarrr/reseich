@@ -140,7 +140,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => router.push('/research')}
-                  className="group bg-gradient-to-r from-[#e9407a] to-[#ff8a00] text-white px-8 py-4 rounded-xl font-semibold hover:from-[#d63384] hover:to-[#e67e22] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#e9407a]/25 flex items-center space-x-2 animate-glow"
+                  className="group bg-gradient-to-r from-[#e9407a] to-[#ff8a00] text-white px-8 py-4 rounded-xl font-semibold hover:from-[#d63384] hover:to-[#e67e22] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#e9407a]/25 flex items-center justify-center space-x-2 animate-glow"
                 >
                   <span>Launch App</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -162,8 +162,7 @@ export default function HomePage() {
                   alt="AI Robot with glowing brain"
                   width={500}
                   height={600}
-                  className="w-auto h-auto max-w-md lg:max-w-lg drop-shadow-2xl"
-                  style={{ width: '200%' }}
+                  className="w-auto h-auto max-w-md lg:max-w-lg drop-shadow-2xl md:w-[200%]"
                 />
                 {/* Enhanced glow effect around robot */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ff8a00]/20 to-[#e9407a]/20 rounded-full blur-3xl scale-150 animate-pulse-slow"></div>
